@@ -1,0 +1,169 @@
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Edu QLD Beginner', cursive;
+    color: #5E3023;
+}
+
+/* Page Transitions */
+.page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.page.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Animated Background */
+.animated-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #DAB49D, #C08552);
+    animation: backgroundAnimation 10s infinite;
+}
+
+@keyframes backgroundAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Landing Page */
+.landing-page .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.landing-page h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #895737;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Main Page */
+.main-page .letter-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    max-width: 800px;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    animation: slideIn 0.8s ease-out;
+}
+
+.main-page .message {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin: 20px 0;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Gallery Page */
+.gallery-page .gallery-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.gallery-page h1 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #895737;
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.photo-placeholder {
+    background: #FFF2E1;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.photo-placeholder:hover {
+    transform: scale(1.05);
+}
+
+/* Buttons */
+.animated-button {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(45deg, #895737, #5E3023);
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    margin-top: 20px;
+}
+
+.animated-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+.animated-button:active {
+    transform: translateY(1px);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translate(-50%, -50%) scale(0.9); }
+    to { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .landing-page h1 {
+        font-size: 2.5em;
+    }
+    
+    .main-page .letter-container {
+        padding: 20px;
+    }
+    
+    .main-page .message {
+        font-size: 1.1em;
+    }
+    
+    .gallery-page h1 {
+        font-size: 2em;
+    }
+}
