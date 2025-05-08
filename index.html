@@ -10,7 +10,11 @@
 <body>
     <!-- Landing Page -->
     <div class="page landing-page active">
-        <div class="animated-background"></div>
+        <div class="animated-background">
+            <div class="particle-container"></div>
+            <div class="flower-container"></div>
+            <div class="heart-container"></div>
+        </div>
         <div class="content">
             <h1>Happy Birthday Mom!</h1>
             <div class="button-container">
@@ -21,15 +25,30 @@
 
     <!-- Main Page -->
     <div class="page main-page">
-        <div class="animated-background"></div>
+        <div class="animated-background">
+            <div class="particle-container"></div>
+            <div class="flower-container"></div>
+            <div class="heart-container"></div>
+        </div>
         <div class="letter-container">
-            <div class="letter-content">
-                <h1>Happy Birthday Mom!</h1>
-                <p class="message">Dear Mom,</p>
-                <p class="message">Thank you for being the most amazing mother in the world. Your love, guidance, and support mean everything to me. I'm so grateful to have you in my life.</p>
-                <p class="message">Happy birthday to the best mom ever!</p>
-                <div class="button-container">
-                    <button class="animated-button" onclick="showGalleryPage()">View Gallery</button>
+            <div class="letter-paper">
+                <div class="letter-edge"></div>
+                <div class="letter-content">
+                    <div class="letter-date">May 8, 2025</div>
+                    <h1>Happy Birthday Mom!</h1>
+                    <p class="message">Dear Mom,</p>
+                    <p class="message">Thank you for being the most amazing mother in the world. Your love, guidance, and support mean everything to me. I'm so grateful to have you in my life.</p>
+                    <p class="message">You've always been there for me through thick and thin, and I want you to know how much I appreciate everything you do. Your strength, kindness, and wisdom inspire me every day.</p>
+                    <p class="message">Happy birthday to the best mom ever!</p>
+                    <div class="letter-signature">
+                        <p>With all my love,</p>
+                        <p>Ewa, your favorite baby</p>
+                    </div>
+                    <div class="letter-decoration left"></div>
+                    <div class="letter-decoration right"></div>
+                    <div class="button-container">
+                        <button class="animated-button" onclick="showGalleryPage()">View Gallery</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -37,17 +56,30 @@
 
     <!-- Gallery Page -->
     <div class="page gallery-page">
-        <div class="animated-background"></div>
+        <div class="animated-background">
+            <div class="particle-container"></div>
+            <div class="flower-container"></div>
+            <div class="heart-container"></div>
+        </div>
         <div class="gallery-container">
             <h1>Memories Together</h1>
             <div class="photo-grid">
-                <!-- Add your photos here -->
-                <div class="photo-placeholder"></div>
-                <div class="photo-placeholder"></div>
-                <div class="photo-placeholder"></div>
-                <div class="photo-placeholder"></div>
-                <div class="photo-placeholder"></div>
-                <div class="photo-placeholder"></div>
+                <div class="polaroid-frame">
+                    <img src="mum1.jpg" alt="Mom's Photo">
+                    <div class="polaroid-caption">A special moment</div>
+                </div>
+                <div class="polaroid-frame">
+                    <img src="mum2.jpg" alt="Mom's Photo">
+                    <div class="polaroid-caption">Happy times</div>
+                </div>
+                <div class="polaroid-frame">
+                    <img src="mum3.jpg" alt="Mom's Photo">
+                    <div class="polaroid-caption">Beautiful memories</div>
+                </div>
+                <div class="polaroid-frame">
+                    <img src="mum4.jpg" alt="Mom's Photo">
+                    <div class="polaroid-caption">Forever in my heart</div>
+                </div>
             </div>
         </div>
     </div>
