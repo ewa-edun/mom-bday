@@ -2,8 +2,10 @@
 function showMainPage() {
     const landingPage = document.querySelector('.landing-page');
     const mainPage = document.querySelector('.main-page');
+    const galleryPage = document.querySelector('.gallery-page');
     
     landingPage.classList.remove('active');
+    galleryPage.classList.remove('active');
     setTimeout(() => {
         mainPage.classList.add('active');
     }, 500);
@@ -14,6 +16,7 @@ function showGalleryPage() {
     const galleryPage = document.querySelector('.gallery-page');
     
     mainPage.classList.remove('active');
+    galleryPage.classList.remove('active');
     setTimeout(() => {
         galleryPage.classList.add('active');
     }, 500);
